@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Preserving Search History</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+</head>
+<body> 
+	<input type="text" name="search-box" id="search-box">
+	<button id="search-button">Search</button>
+
+	<div id="searches" class="searches"></div>
+
+	<template id="search-template">
+		
+		<div class="search">
+			<p>{{createdAt}}</p>
+			<p>{{term}}</p>
+		</div>
+		
+	</template>
+
+	<template id="history-template">
+		{{#each posts}}
+			<div class="search">
+				<p>{{createdAt}}</p>
+				<p>{{term}}</p>
+			</div>
+		{{/each}}
+	</template>
+
+	<script src="src/jquery-3.2.1.min.js"></script>
+	<script src="src/handlebars-v4.0.10.js"></script>
+	<script src="src/main.js"></script>
+</body>
+</html>
